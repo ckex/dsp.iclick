@@ -1,0 +1,9 @@
+<html>  
+	<body>
+		<div>
+			<a target='_blank' href='#click#'>
+				<img src='#imageurl#' />
+			</a>
+		</div>
+	</body>
+</html>
