@@ -17,6 +17,7 @@ type ShowupController struct {
 // @Failure 403 :objectId is empty
 // @router / [get]
 func (showup *ShowupController) Showup() {
+
 	showup.Ctx.Request.ParseForm()
 	params := showup.Ctx.Request.Form
 	var buffer bytes.Buffer
@@ -27,5 +28,6 @@ func (showup *ShowupController) Showup() {
 		buffer.WriteString(value[0])
 	}
 	logger.Info("%d%s", len(params), buffer.String())
+	showup.Ctx.WriteString("success")
 }
 

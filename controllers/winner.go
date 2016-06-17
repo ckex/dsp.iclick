@@ -27,4 +27,5 @@ func (winner *WinnerController) Winning() {
 		buffer.WriteString(value[0])
 	}
 	logger.Info("%d%s", len(params), buffer.String())
+	winner.Ctx.WriteString("success")
 }

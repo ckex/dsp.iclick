@@ -6,7 +6,7 @@ type ClickController struct {
 	beego.Controller
 }
 
-// http://127.0.0.1:9090/v1/click?adxclick=${CLICK_URL:URLENCODE}&imp=${AUCTION_IMP_ID}
+// http://127.0.0.1:9090/v1/click?adxclick=${CLICK_URL:URLENCODE}
 // Golang Redirect https://github.com/jsix/gouri
 // @Title click
 // @Description click

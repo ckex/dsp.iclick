@@ -15,6 +15,20 @@ func init() {
 
 	beego.GlobalControllerRouter["dsp.iclick/controllers:DspController"] = append(beego.GlobalControllerRouter["dsp.iclick/controllers:DspController"],
 		beego.ControllerComments{
+			"Head",
+			`/`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["dsp.iclick/controllers:DspController"] = append(beego.GlobalControllerRouter["dsp.iclick/controllers:DspController"],
+		beego.ControllerComments{
+			"Head",
+			`/`,
+			[]string{"head"},
+			nil})
+
+	beego.GlobalControllerRouter["dsp.iclick/controllers:DspController"] = append(beego.GlobalControllerRouter["dsp.iclick/controllers:DspController"],
+		beego.ControllerComments{
 			"Post",
 			`/`,
 			[]string{"post"},

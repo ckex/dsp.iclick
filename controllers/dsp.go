@@ -24,6 +24,15 @@ var dspClickUrl = beego.AppConfig.DefaultString("dspClickUrl", "")
 var dspShowupUrl = beego.AppConfig.DefaultString("dspShowupUrl", "")
 var landPage = beego.AppConfig.DefaultString("landPage", "")
 
+// @Title loadAds
+// @Description load Ad
+// @Success 200
+// @Failure 403 body is empty
+// @router / [get]
+// @router / [head]
+func (dsp *DspController) Head() {
+	dsp.Ctx.WriteString("success")
+}
 
 // @Title loadAds
 // @Description load Ad
