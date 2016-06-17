@@ -6,6 +6,20 @@ import (
 
 func init() {
 
+	beego.GlobalControllerRouter["dsp.iclick/controllers:ClickController"] = append(beego.GlobalControllerRouter["dsp.iclick/controllers:ClickController"],
+		beego.ControllerComments{
+			"Click",
+			`/`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["dsp.iclick/controllers:DspController"] = append(beego.GlobalControllerRouter["dsp.iclick/controllers:DspController"],
+		beego.ControllerComments{
+			"Post",
+			`/`,
+			[]string{"post"},
+			nil})
+
 	beego.GlobalControllerRouter["dsp.iclick/controllers:ObjectController"] = append(beego.GlobalControllerRouter["dsp.iclick/controllers:ObjectController"],
 		beego.ControllerComments{
 			"Post",
@@ -39,6 +53,13 @@ func init() {
 			"Delete",
 			`/:objectId`,
 			[]string{"delete"},
+			nil})
+
+	beego.GlobalControllerRouter["dsp.iclick/controllers:ShowupController"] = append(beego.GlobalControllerRouter["dsp.iclick/controllers:ShowupController"],
+		beego.ControllerComments{
+			"Showup",
+			`/`,
+			[]string{"get"},
 			nil})
 
 	beego.GlobalControllerRouter["dsp.iclick/controllers:UserController"] = append(beego.GlobalControllerRouter["dsp.iclick/controllers:UserController"],
@@ -87,6 +108,13 @@ func init() {
 		beego.ControllerComments{
 			"Logout",
 			`/logout`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["dsp.iclick/controllers:WinnerController"] = append(beego.GlobalControllerRouter["dsp.iclick/controllers:WinnerController"],
+		beego.ControllerComments{
+			"Winning",
+			`/`,
 			[]string{"get"},
 			nil})
 

@@ -15,6 +15,26 @@ import (
 
 func init() {
 	ns := beego.NewNamespace("/v1",
+		beego.NSNamespace("/showup",
+			beego.NSInclude(
+				&controllers.ShowupController{},
+			),
+		),
+		beego.NSNamespace("/click",
+			beego.NSInclude(
+				&controllers.ClickController{},
+			),
+		),
+		beego.NSNamespace("/winner",
+			beego.NSInclude(
+				&controllers.WinnerController{},
+			),
+		),
+		beego.NSNamespace("/bid",
+			beego.NSInclude(
+				&controllers.DspController{},
+			),
+		),
 		beego.NSNamespace("/object",
 			beego.NSInclude(
 				&controllers.ObjectController{},

@@ -1,12 +1,21 @@
-package controllers
+package test
 
 import (
 	"testing"
 	"fmt"
+	"net/url"
 )
 
 func Test_Startd(t *testing.T) {
 	t.Log("start test . . .")
+
+	encode := url.QueryEscape("http://www.baidu.com/abc?a=def&a=b")
+	decode, err := url.QueryUnescape(encode)
+	if err != nil {
+		t.Error(err)
+	}
+	t.Log(encode)
+	t.Log(decode)
 
 	//创建数组(声明长度)
 	var array1 = [5]int{1, 2, 3}

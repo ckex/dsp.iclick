@@ -4,6 +4,7 @@
 			<a target='_blank' href='#click#'>
 				<img src='#imageurl#' />
 			</a>
+			<img src='#showup#' height='0' width='0' />
 		</div>
 	</body>
 </html>
