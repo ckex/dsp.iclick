@@ -4,4 +4,4 @@
 export GOARCH="amd64"
 export GOOS="linux"
 
-bee pack
+bee pack -o target/linux
